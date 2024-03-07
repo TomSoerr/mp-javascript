@@ -1,0 +1,200 @@
+/* Das sollte immer in der css Datei stehen */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  --nav-height: 5rem;
+}
+
+/* Inhalt */
+
+main {
+  max-width: 75ch;
+  padding: 2rem;
+  margin: 0 auto;
+  margin-top: var(--nav-height);
+}
+
+/* Navigation */
+
+nav {
+  width: 100%;
+  height: var(--nav-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #dedede;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 100;
+}
+
+nav ul {
+  display: contents;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  background-color: #dedede;
+  width: 100%;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+nav img {
+  margin-right: auto;
+  max-height: 100%;
+  width: auto;
+}
+
+/* Navigation Mobile */
+
+nav button {
+  display: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  height: calc(var(--nav-height) - 2rem);
+  width: calc(var(--nav-height) - 2rem);
+  background-color: inherit;
+  background-image: url("./img/menu.svg");
+  background-size: cover;
+}
+
+nav button.open {
+  background-image: url("./img/close.svg");
+}
+
+@media (max-width: 768px) {
+  nav button {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav button.open + ul {
+    display: flex;
+  }
+}
+
+/* Footer */
+
+footer {
+  background-color: #dedede;
+  display: grid;
+  grid:
+    "logo . . ."
+    "about about address sitemap" /
+    1fr 1fr 1fr 1fr;
+  gap: 2rem;
+
+  padding: 2rem;
+}
+
+footer ul {
+  display: contents;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+footer img {
+  grid-area: logo;
+  margin-bottom: 4rem;
+}
+
+footer address {
+  grid-area: address;
+}
+
+footer .about {
+  grid-area: about;
+}
+
+footer .sitemap {
+  grid-area: sitemap;
+}
+
+/* Komponent: Bilder */
+
+#bilder {
+  display: flex;
+  height: 15rem;
+  width: 100%;
+  gap: 2rem;
+}
+
+#bilder div {
+  flex: 1 1 0;
+}
+
+#bilder :nth-child(1) {
+  background-color: #bd7777;
+}
+
+#bilder :nth-child(2) {
+  background-color: #7cbd77;
+}
+
+#bilder :nth-child(3) {
+  background-color: #778cbd;
+}
+
+#bilder :nth-child(4) {
+  background-color: #b877bd;
+}
