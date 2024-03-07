@@ -20,6 +20,7 @@ header: Javascript Crashkurs
 
 - Was ist Javascript?
 - Wie kann ich Javascript im Lernfeld verwenden?
+  - Aufgabe
 - Vertiefung
 
 ---
@@ -81,9 +82,11 @@ if (3 + 2 < 5) {
 
 ---
 
-## Download
-
 ![bg right contain](./qr-code.png)
+
+## Aufgabe
+
+- Bilder Komponente auf der `nav.html` oder `footer.html` einbinden, so wie auf der Startseite
 
 `https://github.com/TomSoerr/mp-javascript`
 
